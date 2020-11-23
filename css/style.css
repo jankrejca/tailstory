@@ -1,0 +1,801 @@
+body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 300px;
+    padding-top: 76px;
+}
+
+::selection {
+  background-color: #C71585;
+  color: white;
+}
+
+h3 {
+  padding-bottom: 40px;
+}
+
+a {
+    color: #C71585;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+textarea, input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.fixedButton {
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    z-index: 9999;
+}
+
+/* Navigace */
+
+nav {
+    min-height: 70px;
+}
+
+.navbar {
+    background-color: white !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(199,21,133)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.navbar-toggler {
+    border-color: #C71585 !important;
+}
+
+.navbar-brand {
+  color: black !important;
+}
+
+.nav-item {
+    padding: 0 5px 0 5px;
+    margin-right: 10px;
+}
+
+.active a {
+border-bottom: 2px solid #C71585;
+}
+
+.nav-item a {
+    color: black !important;
+}
+
+.nav-item:not(.active)::after {
+    content:'';
+    display:block;
+    width:0px;
+    height:2px;
+    background:#C71585;
+    transition: 0.2s;
+}
+
+.nav-item:hover::after {
+    width:100%;
+  }
+
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color:white;
+}
+
+.nav-link {
+    padding:15px 5px;
+    transition:0.2s;
+  }
+
+.dropdown-item.active, .dropdown-item:active {
+    color:#212529;
+  }
+
+.dropdown-item:focus, .dropdown-item:hover {
+  background: white;
+}
+
+/* Úvod */
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../img/uvod2.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+.masthead h1 {
+    text-shadow: 2px 2px black;
+}
+
+.filtr {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 540px) {
+    .masthead h1 {
+        font-size: 4rem !important;
+    }
+    .p-5 {
+        padding: 0 !important;
+        padding-bottom: 60px !important;
+    }
+}
+
+.masthead p {
+    //text-shadow: 1px 1px black;
+}
+
+/* O nás */
+
+#kdojsme {
+  margin-top: 50px;
+}
+
+/* Jak pomáháme */
+
+#jakpomahame {
+  background-color: white;
+  margin-top: 50px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+#jakpomahame i{
+  vertical-align: middle;
+  font-size: 100px;
+  color: #C71585;
+  padding-bottom: 20px;
+}
+
+#jakpomahame ul {
+  list-style-type: square;
+  padding-top: 15px;
+  margin-left: -20px;
+}
+
+.ikonaSluzby {
+     filter: invert(14%) sepia(56%) saturate(6370%) hue-rotate(311deg) brightness(96%) contrast(92%);
+}
+
+/* Novinky */
+
+.novinky {
+    padding-top: 130px;
+}
+
+.novinky .p-5 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 40px;
+}
+
+.card-content {
+	background: #ffffff;
+	border: 4px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.card-img {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0;
+	z-index: 1;
+}
+
+.card-img img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card-img span {
+	position: absolute;
+    top: 17%;
+    left: 20%;
+    background: #C71585;
+    padding: 6px;
+    color: #fff;
+    font-size: 12px;
+
+    transform: translate(-50%,-50%);
+}
+.card-img span h4{
+        font-size: 12px;
+        margin:0;
+        padding:10px 5px;
+         line-height: 0;
+}
+.card-desc {
+	padding: 1.25rem;
+}
+
+.card-desc h3 {
+	color: #000000;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.card-desc p {
+	color: #747373;
+    font-size: 14px;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0px;
+	margin-bottom: 20px;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+}
+.btn-card{
+	background-color: #C71585;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    padding: .84rem 2.14rem;
+    font-size: .81rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: .125rem;
+    border-radius: .125rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: normal;
+    word-wrap: break-word;
+    color: #fff;
+}
+.btn-card:hover {
+    background: white;
+    border: 1px solid #C71585;
+}
+
+a.btn-card:hover {
+    color: #C71585;
+}
+
+a.btn-card {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 540px) {
+    .card-content {
+        margin-bottom: 60px !important;
+    }
+}
+
+/* Čísla */
+
+.cislaWrap{
+  display: flex;
+  margin-top: 100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+#cisla .fullWidth{
+  padding: 0;
+}
+
+.cislaWrap .item{
+  width: 25%;
+  height: 100%;
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.cislaWrap .item:nth-child(1){
+  background-color: #212529;
+}
+
+.cislaWrap .item:nth-child(2){
+  background-color: #30353b;
+}
+
+.cislaWrap .item:nth-child(3){
+  background-color: #212529;
+}
+
+.cislaWrap .item:nth-child(4){
+  background-color: #30353b;
+}
+
+.cislaWrap .item p.cislo{
+  font-size: 40px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.cislaWrap .item p{
+  color: rgba(255, 255, 255);
+  font-size: 18px;
+  margin: 0;
+  padding: 10px;
+}
+
+
+.cislaWrap .item span{
+  width: 60px;
+  background: rgba(255, 255, 255);
+  height: 2px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.cislaWrap .item i{
+  vertical-align: middle;
+  font-size: 50px;
+  color: rgba(255, 255, 255);
+}
+
+
+.cislaWrap .item:hover i, .cislaWrap .item:hover p{
+  color: #C71585;
+  transition: 0.4s;
+}
+
+.cislaWrap .item:hover span{
+  background: #C71585;
+  transition: 0.4s;
+}
+
+@media (max-width: 786px){
+  .cislaWrap .item {
+     flex: 0 0 100%;
+  }
+}
+
+/* Partneři */
+.partneri {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.partneri img {
+  max-height: 150px;
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #212529;
+    height: 300px;
+
+}
+
+.social {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+
+@media screen and (max-width: 540px) {
+    footer {
+        height: 700px;
+    }
+
+    body {
+        padding-bottom: 700px;
+    }
+}
+
+.copyright {
+    background-color: #212529;
+}
+
+/* STRÁNKA AKTUALITY */
+.blog-list h3 {
+  padding-bottom: 10px !important;
+  font-size: 2rem;
+}
+
+.blog-list img {
+    max-width: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+    height: 100%;
+}
+
+.anchor-offset {
+    margin-top: -90px;
+    padding-top: 90px;
+}
+
+.aktualita img {
+    border-radius: 0;
+}
+
+.blog-list .zverejneno, .cascteni, .autor {
+  margin-right: 50px;
+  font-weight: bold;
+}
+
+.ovladani {
+  margin-top: 100px;
+  text-align: center;
+}
+
+@media screen and (max-width: 540px) {
+    .nahledAktuality {
+        margin-bottom: 30px !important;
+    }
+
+    .blog-list h3 {
+        text-align: center;
+    }
+
+    .display-4 {
+        padding-top: 30px;
+    }
+}
+
+/* Admin */
+.administrace footer {
+    height: 70px;
+}
+
+.admin {
+    margin-top: 100px;
+    padding-bottom: 100px !important;
+}
+
+.admin-nav {
+    background-color: #212529 !important;
+}
+
+.admin-nav a {
+    color: white !important;
+}
+
+.admin-nav btn-card:hover a {
+    color: #C71585;
+}
+
+.nadpis-administrace {
+    font-size: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.aktuality-administrace tr:nth-child(2n+2) {
+    background-color: #d4d7da;
+}
+
+.aktuality-administrace td {
+    padding: 10px 10px 10px 10px;
+}
+.aktuality-administrace tr:nth-child(1) {
+    background-color: #212529;
+    color: white;
+}
+
+.aktuality-administrace {
+    margin: auto;
+    width: 100% !important;
+}
+
+.aktuality-administrace .adoptovano {
+    background-color: #72ea72 !important;
+}
+
+.aktulity .pridat {
+    color: #C71585;
+    float: right !important;
+}
+
+.pridatprispevek input {
+    margin-left: 10px;
+}
+
+.upravy {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.upravy form {
+    text-align: center;
+}
+
+.upravy label {
+    margin-right: 15px;
+}
+
+.legendaObyvatele {
+    width: 40px;
+    height: 40px;
+    background-color: #72ea72;
+    margin-top: 30px !important;
+}
+
+.legendaOtazky {
+    width: 40px;
+    height: 40px;
+    background-color: #d1ff00;
+    margin-top: 30px !important;
+}
+
+.admin-alert {
+    top: 72px;
+    left: 0;
+}
+
+/* Login */
+.login-form {
+    background-color: #212529;
+    border: 1px solid #212529;
+    border-radius: 50px;
+    color: white;
+}
+
+.login btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+
+
+/* Obyvatelé */
+.obyvatel {
+    padding-bottom: 50px;
+}
+.popisek span {
+    font-weight: bold;
+}
+
+.popisek i {
+    margin-right: 5px;
+}
+
+.popisek img {
+margin-bottom: 15px !important;
+border-radius: 40px;
+}
+
+.popisek span {
+    margin-bottom: 40px !important;
+}
+
+.filtrObyvatel input[type=checkbox] {
+    margin-right: 5px;
+}
+
+/* O azylu */
+
+.oazylu{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+.oazylu .row:not(:last-child) {
+ padding-bottom: 100px;
+}
+.oazylu h3{
+    font-size: 30px;
+    color: #C71585;
+    padding-bottom: 5px;
+}
+.oazylu h4{
+    font-size: 18px;
+}
+.oazylu-img {
+    text-align: center;
+}
+.oazylu-img img{
+    width: 80%;
+    border-radius: 40px;
+}
+
+@media screen and (max-width: 540px) {
+    .oazylu h3 {
+        text-align: center !important;
+    }
+
+    .podkategorie {
+        text-align: left !important;
+    }
+}
+
+/* Kontakt */
+.kontaktniformular {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+.kontaktniformular input,
+.kontaktniformular textarea {
+    width: 100%;
+    padding: 3%;
+
+    color: #242424;
+    border: 1px solid #B7B7B7;
+}
+.kontaktniformular input::placeholder,
+.kontaktniformular textarea::placeholder {
+    color: #242424;
+}
+
+.kontaktniformular label {
+    text-align: left !important;
+}
+
+.kontaktniformular .btn-card {
+    color: white !important;
+}
+
+.kontaktniformular .btn-card:hover {
+    color: #C71585 !important;
+}
+
+.card-img-top {
+    max-height: 350px;
+}
+
+@media screen and (max-width: 992px) {
+    .kontaktniformular .btn-card {
+        margin-bottom: 60px;
+    }
+}
+
+/* GDPR */
+.gdpr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.gdpr table {
+    margin: 0 auto;
+}
+
+/* Otázky */
+.otazky form {
+    margin: 0 auto;
+}
+
+.otazky input[type=text],
+.otazky input[type=password],
+.otazky input[type=email],
+.otazky textarea {
+    padding: 1%;
+    width: 400px;
+
+    color: #242424;
+    border: 1px solid #B7B7B7;
+}
+.otazky input::placeholder,
+.otazky textarea::placeholder {
+    color: #242424;
+}
+
+.otazky label {
+    text-align: center !important;
+    margin-top: 20px;
+}
+
+.otazky .btn-card {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.btn-card:hover {
+   color: #C71585 !important;
+}
+
+/* Odpovědi */
+.odpovedi {
+    margin-top: 100px;
+}
+
+.otazkaodpoved:not(:first-child) {
+    margin-top: 60px;
+}
+
+.g-recaptcha {
+    margin-top: 20px;
+}
+
+.odpovedi {
+    padding-top: 76px;
+    margin-top: -76px;
+}
+
+.otazky .ovladani {
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.novaOtazka {
+    background-color: #d1ff00 !important;
+}
+
+/* Schůzka */
+.schuzka {
+    padding-bottom: 100px;
+}
+
+.schuzka input,
+.schuzka textarea {
+    padding: 2%;
+    width: 50%;
+    color: #242424;
+    border: 1px solid #B7B7B7;
+}
+
+.schuzka input[type="file"] {
+    padding: 0;
+    width: 250px;
+    color: #242424;
+    border: 0;
+}
+.schuzka input::placeholder,
+.schuzka textarea::placeholder {
+    color: #242424;
+}
+
+.schuzka .btn-card {
+    color: white !important;
+}
+
+.schuzka .btn-card:hover {
+    color: #C71585 !important;
+}
+
+.schuzka label {
+    margin-top: 20px;
+}
+
+/* IS */
+.stavy .card {
+    border-color: #C71585 !important;
+}
+
+.stavy h4 {
+    color: #C71585;
+}
+
+.stavy input {
+    font-size: 20px;
+    width: 40px;
+}
+
+.stavy .minus:hover {
+    background-color: red;
+    color: white;
+}
+
+.stavy .plus:hover {
+    background-color: green;
+    color: white;
+}
+
+.poznamka {
+    background-color: #e9ed68;
+    color: black;
+    border: 1px solid black;
+}
+
+.poznamka img {
+    margin-top: -30px;
+}
